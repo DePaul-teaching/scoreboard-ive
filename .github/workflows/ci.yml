@@ -8,10 +8,12 @@ on:
       - ".github/workflows/ci.yml"
   pull_request:
     branches: [main]
-  permissions: read
     paths-ignore:
       - "**/*.md"
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   test:
